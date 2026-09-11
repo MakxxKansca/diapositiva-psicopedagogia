@@ -4,7 +4,17 @@ Aplicación web interactiva en formato diapositivas (*slide deck*) desarrollada 
 
 ---
 
-## 🚀 Cómo Abrir y Ejecutar el Recurso
+## 🌐 Enlace Público en Línea (Disponible para cualquiera)
+
+El proyecto se encuentra alojado y publicado oficialmente en GitHub Pages:
+👉 **[https://makxxkansca.github.io/diapositiva-psicopedagogia/](https://makxxkansca.github.io/diapositiva-psicopedagogia/)**
+
+Repositorio en GitHub:
+📦 **[https://github.com/MakxxKansca/diapositiva-psicopedagogia](https://github.com/MakxxKansca/diapositiva-psicopedagogia)**
+
+---
+
+## 🚀 Cómo Abrir y Ejecutar el Recurso Localmente
 
 Este recurso es **100% autocontenido y no requiere instalación de dependencias externas**.
 
