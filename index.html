@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evolución de la Psicopedagogía, Tercera Métrica y Autocuidado Docente | Recurso Interactivo</title>
+  <meta name="description" content="Recurso digital interactivo sobre la evolución histórica de la psicopedagogía, los principios de la tercera métrica y estrategias digitales de autocuidado para educadores.">
+  
+  <!-- Tipografía Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div id="app-container">
+    <!-- BARRA DE NAVEGACIÓN SUPERIOR -->
+    <header class="top-bar" role="banner">
+      <div class="brand-section">
+        <span class="brand-badge">
+          <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          Psicopedagogía XXI
+        </span>
+        <span class="brand-title">Recurso Didáctico Interactivo</span>
+      </div>
+
+      <!-- Barra de Progreso Central y Puntos de Salto -->
+      <div class="progress-center">
+        <div class="progress-track" aria-label="Progreso de la presentación">
+          <div class="progress-fill" id="progress-fill" style="width: 14.28%;"></div>
+        </div>
+        <div class="slide-dots" id="slide-dots" role="tablist" aria-label="Selector de diapositivas">
+          <!-- Los botones de puntos se generan dinámicamente -->
+        </div>
+      </div>
+
+      <!-- Herramientas Superiores Derecha -->
+      <div class="top-tools">
+        <button id="btn-sound-toggle" class="tool-btn" title="Activar/Silenciar efectos de sonido" aria-label="Efectos de sonido">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+          </svg>
+        </button>
+        <button id="btn-help" class="tool-btn" title="Ayuda e interactividades" aria-label="Guía de interactividad">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+          </svg>
+        </button>
+        <button id="btn-fullscreen" class="tool-btn" title="Pantalla Completa" aria-label="Pantalla Completa">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <polyline points="9 21 3 21 3 15"></polyline>
+            <line x1="21" y1="3" x2="14" y2="10"></line>
+            <line x1="3" y1="21" x2="10" y2="14"></line>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- ESCENARIO PRINCIPAL DE DIAPOSITIVAS -->
+    <main class="slide-deck" id="slide-deck" role="region" aria-label="Presentación interactiva">
+
+      <!-- ================= DIAPOSITIVA 1: PORTADA ================= -->
+      <section class="slide slide-hero active" id="slide-1" data-slide="1" aria-label="Portada y Bienvenida">
+        <div class="hero-content">
+          <span class="hero-pill">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+            </svg>
+            Recurso Multimedia e Interactivo
+          </span>
+          <h1 class="hero-title">Evolución histórica de la Psicopedagogía &amp; la Tercera Métrica</h1>
+          <p class="hero-subtitle">
+            Un recorrido interactivo desde los orígenes científicos del aprendizaje humano hasta los 4 pilares de la Tercera Métrica y estrategias de autocuidado digital docente.
+          </p>
+
+          <div class="hero-features">
+            <div class="hero-feature-card">
+              <div class="feature-icon-wrapper" style="background: rgba(56,189,248,0.15); color: #38bdf8;">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <h3 class="feature-title">Línea de Tiempo</h3>
+              <p class="feature-desc">Hitos desde el siglo XVII al XXI con ventanas emergentes interactivas.</p>
+            </div>
+
+            <div class="hero-feature-card">
+              <div class="feature-icon-wrapper" style="background: rgba(245,158,11,0.15); color: #f59e0b;">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <h3 class="feature-title">Tercera Métrica</h3>
+              <p class="feature-desc">4 pilares interactivos: Bienestar, Sabiduría, Asombro y Generosidad.</p>
+            </div>
+
+            <div class="hero-feature-card">
+              <div class="feature-icon-wrapper" style="background: rgba(16,185,129,0.15); color: #10b981;">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+              </div>
+              <h3 class="feature-title">Autocuidado Docente</h3>
+              <p class="feature-desc">Pestañas prácticas y temporizador de regeneración digital 50/10.</p>
+            </div>
+
+            <div class="hero-feature-card">
+              <div class="feature-icon-wrapper" style="background: rgba(168,85,247,0.15); color: #a855f7;">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.45 1-1 1H7c-.55 0-1-.45-1-1v-2.34"/><path d="M14 14.66V17c0 .55.45 1 1 1h2c.55 0 1-.45 1-1v-2.34"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
+              </div>
+              <h3 class="feature-title">Quiz Gamificado</h3>
+              <p class="feature-desc">Desafío con puntaje e insignia descargable personalizada.</p>
+            </div>
+          </div>
+
+          <button id="btn-hero-start" class="hero-cta-btn">
+            Comenzar Recorrido Interactivo
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </button>
+        </div>
+      </section>
+
+      <!-- ================= DIAPOSITIVA 2: LÍNEA DE TIEMPO INTERACTIVA ================= -->
+      <section class="slide" id="slide-2" data-slide="2" aria-label="Línea de Tiempo Interactiva">
+        <header class="slide-header">
+          <div class="slide-category">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Eje Histórico y Científico
+          </div>
+          <h2 class="slide-title">Evolución Histórica de la Psicopedagogía</h2>
+          <p class="slide-subtitle">
+            Explora las etapas que transformaron la intuición filosófica en una disciplina científica interdisciplinaria. <strong>Haz clic en cualquier hito para abrir su ventana emergente (pop-up)</strong> con detalles, citas y reflexiones.
+          </p>
+        </header>
+
+        <!-- Filtros de época -->
+        <div class="timeline-filter-bar" id="timeline-filters">
+          <button class="filter-btn active" data-filter="all">Todos los Hitos</button>
+          <button class="filter-btn" data-filter="filosofico">Orígenes Filosóficos (s. XVII-XIX)</button>
+          <button class="filter-btn" data-filter="cientifica">Consolidación Científica (s. XIX-XX)</button>
+          <button class="filter-btn" data-filter="latam">Latinoamérica (1956-1981)</button>
+          <button class="filter-btn" data-filter="sigloxxi">Siglo XXI (Neurociencia &amp; Inclusión)</button>
+        </div>
+
+        <!-- Pista de tarjetas cronológicas -->
+        <div class="timeline-track-container">
+          <div class="timeline-track" id="timeline-cards-container">
+            <!-- Renderizado dinámico desde data.js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= DIAPOSITIVA 3: LA TERCERA MÉTRICA ================= -->
+      <section class="slide" id="slide-3" data-slide="3" aria-label="La Tercera Métrica del Siglo XXI">
+        <header class="slide-header">
+          <div class="slide-category" style="color: var(--color-wisdom);">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            Paradigma Transformador del Siglo XXI
+          </div>
+          <h2 class="slide-title">Los 4 Pilares de la Tercera Métrica</h2>
+          <p class="slide-subtitle">
+            Propuesta que trasciende las dos métricas tradicionales (dinero y poder) para medir el éxito humano mediante criterios de plenitud. <strong>Haz clic en los botones interactivos de cada tarjeta para desplegar su aplicación concreta en la docencia.</strong>
+          </p>
+        </header>
+
+        <div class="metrics-grid" id="metrics-grid">
+          <!-- Renderizado dinámico desde data.js con botones desplegables -->
+        </div>
+      </section>
+
+      <!-- ================= DIAPOSITIVA 4: AUTOCUIDADO DOCENTE & TEMPORIZADOR ================= -->
+      <section class="slide" id="slide-4" data-slide="4" aria-label="Autocuidado y Calidad de Vida Docente">
+        <header class="slide-header">
+          <div class="slide-category" style="color: var(--color-wellness);">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            Salud Ocupacional y Entorno Digital
+          </div>
+          <h2 class="slide-title">Estrategias Digitales de Autocuidado Docente</h2>
+          <p class="slide-subtitle">
+            Herramientas prácticas frente a la economía de la atención y el diseño persuasivo de la tecnología. Navega por las pestañas temáticas y experimenta el temporizador de la Regla 50/10.
+          </p>
+        </header>
+
+        <div class="selfcare-layout">
+          <!-- Columna izquierda: Pestañas Interactivas -->
+          <div class="selfcare-tabs-wrapper">
+            <div class="tabs-nav" id="selfcare-tabs-nav" role="tablist">
+              <!-- Botones de pestañas generados por app.js -->
+            </div>
+            <div class="tabs-panels-container" id="selfcare-panels-container">
+              <!-- Paneles de contenido generados por app.js -->
+            </div>
+          </div>
+
+          <!-- Columna derecha: Temporizador 50/10 Interactivo -->
+          <div class="timer-widget-card" aria-label="Temporizador de regeneración digital">
+            <div>
+              <span class="timer-badge">Pausa Consciente Docente</span>
+              <h3 class="timer-title">Regla de Oro 50/10</h3>
+              <p class="timer-subtitle">Alterna 50 min de trabajo enfocado con 10 min de descanso alejado de pantallas.</p>
+            </div>
+
+            <div class="timer-display-circle">
+              <svg class="timer-svg" viewBox="0 0 160 160">
+                <circle class="timer-svg-bg" cx="80" cy="80" r="70"></circle>
+                <circle class="timer-svg-progress" id="timer-progress-circle" cx="80" cy="80" r="70"></circle>
+              </svg>
+              <div class="timer-time-text" id="timer-display">50:00</div>
+              <div class="timer-mode-label" id="timer-mode-label">Trabajo Enfocado</div>
+            </div>
+
+            <div class="timer-controls">
+              <button id="btn-timer-toggle" class="btn-timer-primary">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                <span id="timer-btn-text">Iniciar 50 min</span>
+              </button>
+              <button id="btn-timer-reset" class="btn-timer-secondary" title="Reiniciar temporizador">
+                Reiniciar
+              </button>
+              <button id="btn-timer-switch" class="btn-timer-secondary" title="Cambiar a pausa de 10 min">
+                10m Pausa
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= DIAPOSITIVA 5: VIDEOTECA ACADÉMICA CURADA ================= -->
+      <section class="slide" id="slide-5" data-slide="5" aria-label="Videoteca Curada">
+        <header class="slide-header">
+          <div class="slide-category" style="color: var(--color-primary);">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+            Recursos Multimedia Curados
+          </div>
+          <h2 class="slide-title">Videoteca Académica Especializada</h2>
+          <p class="slide-subtitle">
+            Videos incrustados de fuentes académicas confiables sobre fundamentos psicopedagógicos, la Tercera Métrica y técnicas de bienestar docente.
+          </p>
+        </header>
+
+        <div class="videoteca-grid" id="videoteca-grid">
+          <!-- Tarjetas con videos incrustados responsivos desde data.js -->
+        </div>
+      </section>
+
+      <!-- ================= DIAPOSITIVA 6: DESAFÍO GAMIFICADO (QUIZ) ================= -->
+      <section class="slide" id="slide-6" data-slide="6" aria-label="Desafío Gamificado">
+        <header class="slide-header">
+          <div class="slide-category" style="color: var(--color-wisdom);">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+            Gamificación y Evaluación Formativa
+          </div>
+          <h2 class="slide-title">Desafío Psicopedagógico Interactivo</h2>
+          <p class="slide-subtitle">
+            Pon a prueba tus conocimientos sobre la evolución histórica, los pilares de la Tercera Métrica y las estrategias docentes. Recibe retroalimentación inmediata y obtén tu insignia.
+          </p>
+        </header>
+
+        <div class="quiz-container">
+          <!-- Barra de estado del quiz -->
+          <div class="quiz-header-bar">
+            <span class="quiz-progress-text" id="quiz-question-indicator">Pregunta 1 de 4</span>
+            <span class="quiz-score-badge">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              Puntaje: <span id="quiz-score">0</span> pts
+            </span>
+          </div>
+
+          <!-- Tarjeta de pregunta activa -->
+          <div class="quiz-card" id="quiz-card">
+            <h3 class="quiz-question-title" id="quiz-question-text">Cargando pregunta...</h3>
+            
+            <div class="quiz-options-list" id="quiz-options-list">
+              <!-- Botones de opciones A, B, C, D inyectados por app.js -->
+            </div>
+
+            <!-- Caja de retroalimentación pedagógica -->
+            <div class="quiz-feedback-box" id="quiz-feedback-box">
+              <div class="feedback-title" id="feedback-title"></div>
+              <p class="feedback-desc" id="feedback-desc"></p>
+              <button id="btn-next-question" class="btn-next-question">
+                Siguiente Pregunta
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Pantalla de Resultados y Certificado / Insignia -->
+          <div class="quiz-results-card" id="quiz-results-card">
+            <div class="results-badge-icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.45 1-1 1H7c-.55 0-1-.45-1-1v-2.34"/><path d="M14 14.66V17c0 .55.45 1 1 1h2c.55 0 1-.45 1-1v-2.34"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
+            </div>
+            <h3 class="results-title">¡Desafío Completado con Éxito!</h3>
+            <div class="results-score-highlight" id="results-score-display">100 Puntos</div>
+            <p class="results-message" id="results-message">
+              Has demostrado un dominio integral de los hitos psicopedagógicos, la Tercera Métrica y las estrategias de autocuidado digital.
+            </p>
+
+            <!-- Diploma Interactivo Personalizable -->
+            <div class="certificate-preview" id="certificate-box">
+              <div class="cert-institution">Certificación de Aprendizaje Psicopedagógico</div>
+              <p style="font-size: 0.85rem; color: #cbd5e1; margin-top: 0.25rem;">Se reconoce la participación destacada de:</p>
+              <input type="text" id="cert-user-name" class="cert-name-input" placeholder="Escribe tu Nombre y Apellido aquí" value="Estudiante / Docente Participante" aria-label="Nombre del participante">
+              <p class="cert-motto">"Por articular el saber científico del aprendizaje humano con el autocuidado y la Tercera Métrica"</p>
+            </div>
+
+            <div class="results-action-buttons">
+              <button id="btn-restart-quiz" class="btn-nav">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg>
+                Reintentar Desafío
+              </button>
+              <button id="btn-print-cert" class="btn-nav primary">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+                Guardar / Imprimir Diploma
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= DIAPOSITIVA 7: CONCLUSIONES Y REFERENCIAS ================= -->
+      <section class="slide" id="slide-7" data-slide="7" aria-label="Síntesis y Referencias">
+        <header class="slide-header">
+          <div class="slide-category" style="color: var(--color-primary);">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            Cierre Integrador y Rigor Científico
+          </div>
+          <h2 class="slide-title">Síntesis y Referencias Bibliográficas</h2>
+          <p class="slide-subtitle">
+            Integración de los aprendizajes clave y repositorio de enlaces a las fuentes consultadas en el documento de origen.
+          </p>
+        </header>
+
+        <div class="summary-layout">
+          <!-- Columna Izquierda: Síntesis Pedagógica -->
+          <div class="summary-card">
+            <div>
+              <blockquote class="summary-quote">
+                "La calidad de los aprendizajes escolares depende indisolublemente de la calidad de vida, la sabiduría y la serenidad de quienes enseñan."
+              </blockquote>
+
+              <div class="summary-points-list">
+                <div class="summary-point-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <div>
+                    <strong>Evolución Continua:</strong> De la intuición del siglo XVII a una disciplina interdisciplinaria que articula psicología, pedagogía y neurociencias.
+                  </div>
+                </div>
+
+                <div class="summary-point-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <div>
+                    <strong>Trascendencia del Éxito:</strong> La Tercera Métrica nos recuerda que el verdadero impacto educativo florece desde el bienestar, la sabiduría y la compasión.
+                  </div>
+                </div>
+
+                <div class="summary-point-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <div>
+                    <strong>Cuidado Activo:</strong> La regla 50/10, los límites tecnológicos y la conexión cara a cara son salvaguardas éticas contra el agotamiento docente.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-glass); font-size: 0.82rem; color: var(--text-dim);">
+              Diseñado con rigor académico y tecnologías web modernas para evaluación pedagógica.
+            </div>
+          </div>
+
+          <!-- Columna Derecha: Referencias Originales -->
+          <div class="references-card">
+            <h3 style="font-size: 1.1rem; font-weight: 800; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+              Fuentes Bibliográficas del Documento
+            </h3>
+            <div class="references-list" id="references-list">
+              <!-- Inyectadas dinámicamente desde data.js -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- BARRA INFERIOR DE CONTROLES FLOTANTES -->
+    <footer class="bottom-bar" role="contentinfo">
+      <div class="slide-counter" id="slide-counter" aria-live="polite">
+        Diapositiva <span>1</span> de 7
+      </div>
+
+      <nav class="nav-buttons" aria-label="Navegación de diapositivas">
+        <button id="btn-prev" class="btn-nav" disabled aria-label="Diapositiva anterior">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          Anterior
+        </button>
+        <button id="btn-next" class="btn-nav primary" aria-label="Diapositiva siguiente">
+          Siguiente
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+      </nav>
+
+      <div class="keyboard-hints" aria-hidden="true">
+        Navegar con:
+        <span class="kbd-key">←</span>
+        <span class="kbd-key">→</span>
+        <span class="kbd-key">Espacio</span>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ================= VENTANA EMERGENTE (POP-UP MODAL ACCESIBLE) ================= -->
+  <div class="modal-overlay" id="global-modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-container" role="document">
+      <div class="modal-header">
+        <span class="modal-badge-tag" id="modal-badge">Hito Histórico</span>
+        <button class="modal-close-btn" id="btn-close-modal" aria-label="Cerrar ventana emergente">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <div class="modal-body" id="modal-body-content">
+        <!-- Rellenado dinámicamente con título, contexto, cita, puntos y relevancia -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MODAL DE AYUDA E INTERACTIVIDAD ================= -->
+  <div class="modal-overlay" id="help-modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-container" role="document">
+      <div class="modal-header">
+        <span class="modal-badge-tag" style="background: rgba(16,185,129,0.15); color: #10b981;">Guía de Interactividad</span>
+        <button class="modal-close-btn" id="btn-close-help-modal" aria-label="Cerrar ayuda">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h3 class="modal-title">Cómo Interactuar con este Recurso</h3>
+        <p class="modal-description">
+          Este recurso cumple con todos los requisitos de interactividad establecidos:
+        </p>
+        <div class="modal-points-list">
+          <div>🔘 <strong>Botones de Interacción:</strong> En la Diapositiva 3 (Tercera Métrica) pulsa los botones de alternancia para desplegar las aplicaciones prácticas docentes.</div>
+          <div>🪟 <strong>Ventanas Emergentes (Pop-ups):</strong> En la Diapositiva 2 (Línea de Tiempo) haz clic en cualquier tarjeta de hito o personaje para abrir su ventana emergente con citas e historia.</div>
+          <div>🎬 <strong>Videos Incrustados:</strong> En la Diapositiva 5 cuentas con videos académicos de fuentes confiables directamente reproducibles.</div>
+          <div>🎮 <strong>Gamificación:</strong> En la Diapositiva 6 participa en el Quiz con retroalimentación inmediata, puntuación acumulativa y diploma imprimible.</div>
+          <div>⏱️ <strong>Temporizador de Autocuidado:</strong> En la Diapositiva 4 puedes activar el temporizador interactivo de la Regla 50/10.</div>
+        </div>
+        <div class="modal-quote-box">
+          Atajos de teclado: Flecha Derecha / Espacio (Avanzar), Flecha Izquierda (Retroceder), Escape (Cerrar ventanas emergentes).
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

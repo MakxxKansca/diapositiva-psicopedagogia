@@ -1,0 +1,7 @@
+# Capturas de prueba locales
+screenshot_*.png
+
+# Archivos de sistema y logs
+*.log
+.DS_Store
+Thumbs.db
