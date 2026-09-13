@@ -1,6 +1,17 @@
 # Infografía Interactiva: Principios de Atención a la Diversidad, Marco Legal en Panamá y Buenas Prácticas en el Nivel Medio
 
-Recurso educativo digital interactivo de última generación diseñado para docentes, estudiantes de psicopedagogía y directivos escolares. Desarrollado con HTML5 semántico, Vanilla CSS avanzado y JavaScript moderno siguiendo las directrices de los skills `frontend-design`, `ui-ux-pro-max`, `web-design-guidelines` y `polish`.
+---
+
+## 🌐 Enlaces Públicos en Línea (Listos para compartir)
+
+- 🔗 **Página Web Pública (GitHub Pages)**:  
+  **[https://makxxkansca.github.io/atencion-a-la-diversidad-panama/](https://makxxkansca.github.io/atencion-a-la-diversidad-panama/)**
+
+- 📦 **Repositorio en GitHub**:  
+  **[https://github.com/MakxxKansca/atencion-a-la-diversidad-panama](https://github.com/MakxxKansca/atencion-a-la-diversidad-panama)**
+
+- 📌 *Enlace alternativo (Directorio en diapositiva-psicopedagogia)*:  
+  [https://makxxkansca.github.io/diapositiva-psicopedagogia/508/](https://makxxkansca.github.io/diapositiva-psicopedagogia/508/)
 
 ---
 
