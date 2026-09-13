@@ -1,6 +1,6 @@
 /**
  * RECURSO DIGITAL INTERACTIVO: PSICOPEDAGOGÍA, TERCERA MÉTRICA Y AUTOCUIDADO
- * Controlador Principal e Interactividad - Denis (516)
+ * Controlador Principal e Interactividad -  (516)
  * Lógica modular: Renderizado, Modales, Acordeones, Temporizador, Respiración y Quiz Gamificado
  */
 

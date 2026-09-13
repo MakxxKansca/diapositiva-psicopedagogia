@@ -1,6 +1,6 @@
 /**
  * RECURSO DIGITAL INTERACTIVO: PSICOPEDAGOGÍA, TERCERA MÉTRICA Y AUTOCUIDADO
- * Base de Datos Estructurada de Contenidos - Denis (516)
+ * Base de Datos Estructurada de Contenidos -  (516)
  * Fuente Primaria: Información .md
  */
 
