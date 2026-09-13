@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Infografía Interactiva: Atención a la Diversidad y Educación Inclusiva en Panamá</title>
+  <meta name="description" content="Principios fundamentales de la atención a la diversidad, marco legal panameño (Ley 42/1999, Decreto 1/2000, Resuelto 924/2006) y buenas prácticas inclusivas en el nivel medio.">
+  
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       BARRA DE HERRAMIENTAS DE ACCESIBILIDAD UNIVERSAL (WCAG)
+       ======================================================================== -->
+  <header class="accessibility-bar" role="banner" aria-label="Herramientas de accesibilidad">
+    <div class="accessibility-container">
+      <div class="accessibility-brand">
+        <span class="badge-tag">Panamá Inclusiva</span>
+        <span>Psicopedagogía & Diversidad</span>
+      </div>
+      <div class="accessibility-actions">
+        <!-- Lector por Voz (Web Speech API) -->
+        <button id="btn-audio-narrator" class="btn-tool" aria-label="Escuchar narración accesible por voz" title="Escuchar texto narrado">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg>
+          <span id="audio-btn-label">Escuchar Resumen</span>
+        </button>
+
+        <!-- Ajuste de Tipografía -->
+        <button id="btn-font-dec" class="btn-tool" title="Disminuir tamaño de letra" aria-label="Disminuir tamaño de fuente">A-</button>
+        <button id="btn-font-inc" class="btn-tool" title="Aumentar tamaño de letra" aria-label="Aumentar tamaño de fuente">A+</button>
+
+        <!-- Selector de Tema (Oscuro / Claro) -->
+        <button id="btn-theme-toggle" class="btn-tool" title="Cambiar contraste de color / Modo claro u oscuro" aria-label="Cambiar tema de color">
+          <svg id="theme-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <span id="theme-label">Modo Claro</span>
+        </button>
+
+        <!-- Imprimir / Exportar a PDF -->
+        <button id="btn-print-page" class="btn-tool" title="Imprimir o guardar en PDF" aria-label="Imprimir infografía">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+          <span>Exportar PDF</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       BARRA DE NAVEGACIÓN RÁPIDA (CHIPS INTERACTIVOS)
+       ======================================================================== -->
+  <nav class="nav-chips-container" aria-label="Navegación por secciones">
+    <a href="#principios" class="nav-chip">💡 3 Principios</a>
+    <a href="#marco-legal" class="nav-chip">⚖️ Marco Legal</a>
+    <a href="#buenas-practicas" class="nav-chip">🏫 Buenas Prácticas (Nivel Medio)</a>
+    <a href="#multimedia" class="nav-chip">🎥 Recursos en Video</a>
+    <a href="#desafio" class="nav-chip">🏆 Desafío Gamificado</a>
+    <a href="#fuentes" class="nav-chip">📚 Fuentes & Citas</a>
+  </nav>
+
+  <main class="main-wrapper">
+
+    <!-- ======================================================================
+         HERO SECTION: PORTADA Y ENFOQUE PEDAGÓGICO
+         ====================================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="hero-badge">
+        <span>Infografía Interactiva Multimedia</span>
+      </div>
+      <h1 class="hero-title">
+        Atención a la Diversidad & <br>
+        <span class="gradient-text">Educación Inclusiva en Panamá</span>
+      </h1>
+      <p class="hero-subtitle">
+        Un enfoque pedagógico que concibe las diferencias individuales como una riqueza natural y un derecho inalienable, respaldado por la legislación nacional e implementado a través de estrategias transformadoras en la educación media panameña.
+      </p>
+
+      <!-- Indicadores Clave -->
+      <div class="hero-stats-grid">
+        <div class="stat-card" style="--stat-accent: var(--indigo-500);">
+          <span class="stat-number">3 Principios</span>
+          <span class="stat-label">Normalización, Flexibilidad y Atención Personalizada</span>
+        </div>
+        <div class="stat-card" style="--stat-accent: var(--teal-500);">
+          <span class="stat-number">3 Pilares Legales</span>
+          <span class="stat-label">Ley 42 (1999), Dec. 1 (2000) y Res. 924 (2006)</span>
+        </div>
+        <div class="stat-card" style="--stat-accent: var(--emerald-500);">
+          <span class="stat-number">Nivel Medio</span>
+          <span class="stat-label">PEI, DUA y Trabajo Colaborativo en 10.°, 11.° y 12.°</span>
+        </div>
+        <div class="stat-card" style="--stat-accent: var(--amber-500);">
+          <span class="stat-number">100% Inclusivo</span>
+          <span class="stat-label">Diseño accesible para el derecho pleno al aprendizaje</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECCIÓN 1: PRINCIPIOS FUNDAMENTALES DE LA ATENCIÓN A LA DIVERSIDAD
+         ====================================================================== -->
+    <section class="section-block" id="principios">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <span class="section-eyebrow" style="--accent-color: var(--indigo-400);">Fundamentos Psicopedagógicos</span>
+          <h2 class="section-title">Principios Fundamentales de la Atención a la Diversidad</h2>
+          <p class="section-desc">
+            Bases conceptuales que orientan la transformación de los centros educativos hacia entornos equitativos donde cada estudiante alcanza su máximo potencial.
+          </p>
+        </div>
+      </div>
+
+      <div class="principles-grid">
+        <!-- Principio 1: Normalización -->
+        <article class="principle-card" style="--card-border-hover: var(--indigo-400); --card-glow: var(--indigo-glow);">
+          <span class="principle-number">01</span>
+          <div class="principle-icon-wrapper" style="--icon-bg: rgba(99, 102, 241, 0.15); --icon-color: var(--indigo-400);">
+            ⚖️
+          </div>
+          <h3 class="principle-title">Normalización</h3>
+          <p class="principle-definition">
+            Establece que las personas con discapacidad o necesidades educativas específicas deben acceder a los <strong>mismos servicios, entornos, vivencias y oportunidades</strong> que el resto de la comunidad escolar, superando cualquier segregación.
+          </p>
+
+          <div class="legal-pill">
+            <span>📜</span>
+            <span>Reflejo normativo: <strong>Art. 19 de la Ley 42 de 1999</strong></span>
+          </div>
+
+          <button class="btn-toggle-expand" onclick="toggleExpand('expand-norm')" aria-expanded="false" aria-controls="expand-norm">
+            <span>Explorar Aplicación Práctica</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+
+          <div id="expand-norm" class="expandable-content">
+            <h4 style="color: var(--indigo-400); margin-bottom: 0.5rem; font-size: 0.9rem;">Implicaciones Pedagógicas:</h4>
+            <p>• <strong>Desinstitucionalización:</strong> Supera el modelo asistencialista para abrazar el modelo social de derechos humanos.</p>
+            <p style="margin-top: 0.4rem;">• <strong>Pertenencia comunitaria:</strong> El estudiante asiste a su escuela barrial regular y comparte espacios académicos, recreativos y cívicos con sus pares de la misma edad.</p>
+          </div>
+        </article>
+
+        <!-- Principio 2: Flexibilidad -->
+        <article class="principle-card" style="--card-border-hover: var(--teal-400); --card-glow: rgba(20, 184, 166, 0.25);">
+          <span class="principle-number">02</span>
+          <div class="principle-icon-wrapper" style="--icon-bg: rgba(20, 184, 166, 0.15); --icon-color: var(--teal-400);">
+            🧩
+          </div>
+          <h3 class="principle-title">Flexibilidad</h3>
+          <p class="principle-definition">
+            Consiste en la capacidad del sistema educativo para <strong>adaptar los procesos de enseñanza-aprendizaje, tiempos, recursos y metodologías</strong> a los ritmos y perfiles diversos de cada estudiante, sin comprometer la calidad formativa.
+          </p>
+
+          <div class="legal-pill">
+            <span>📜</span>
+            <span>Reflejo normativo: <strong>Art. 21 Ley 42 & Dec. Ejec. 1 de 2000</strong></span>
+          </div>
+
+          <button class="btn-toggle-expand" onclick="toggleExpand('expand-flex')" aria-expanded="false" aria-controls="expand-flex">
+            <span>Explorar Aplicación Práctica</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+
+          <div id="expand-flex" class="expandable-content">
+            <h4 style="color: var(--teal-400); margin-bottom: 0.5rem; font-size: 0.9rem;">Implicaciones Pedagógicas:</h4>
+            <p>• <strong>Adecuación Curricular:</strong> El currículo se amolda al alumno y no el alumno al currículo estandarizado rígido.</p>
+            <p style="margin-top: 0.4rem;">• <strong>Diseño Universal (DUA):</strong> Ofrecer múltiples medios de representación, expresión y motivación para todo el estudiantado desde la planificación inicial.</p>
+          </div>
+        </article>
+
+        <!-- Principio 3: Atención Personalizada -->
+        <article class="principle-card" style="--card-border-hover: var(--emerald-400); --card-glow: var(--emerald-glow);">
+          <span class="principle-number">03</span>
+          <div class="principle-icon-wrapper" style="--icon-bg: rgba(16, 185, 129, 0.15); --icon-color: var(--emerald-400);">
+            🎯
+          </div>
+          <h3 class="principle-title">Atención Personalizada</h3>
+          <p class="principle-definition">
+            Reconoce la singularidad de cada aprendiz, exigiendo una <strong>intervención pedagógica individualizada</strong> diseñada a partir de sus intereses, fortalezas, estilos cognitivos y áreas específicas donde requiere apoyos técnicos o humanos.
+          </p>
+
+          <div class="legal-pill">
+            <span>📜</span>
+            <span>Instrumento oficial: <strong>PEI (Resuelto N.º 924 de 2006 MEDUCA)</strong></span>
+          </div>
+
+          <button class="btn-toggle-expand" onclick="toggleExpand('expand-pers')" aria-expanded="false" aria-controls="expand-pers">
+            <span>Explorar Aplicación Práctica</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+
+          <div id="expand-pers" class="expandable-content">
+            <h4 style="color: var(--emerald-400); margin-bottom: 0.5rem; font-size: 0.9rem;">Implicaciones Pedagógicas:</h4>
+            <p>• <strong>Programa Educativo Individual (PEI):</strong> Hoja de ruta coordinada entre docentes regulares, profesores de educación especial, gabinete psicopedagógico y la familia.</p>
+            <p style="margin-top: 0.4rem;">• <strong>Evaluación Dinámica:</strong> Medición del progreso con base en metas personalizadas y no solo en estándares comparativos uniformes.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECCIÓN 2: MARCO LEGAL PANAMEÑO DE REFERENCIA
+         ====================================================================== -->
+    <section class="section-block" id="marco-legal">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <span class="section-eyebrow" style="--accent-color: var(--teal-400);">Sustento Jurídico Nacional</span>
+          <h2 class="section-title">Marco Legal de la Educación Inclusiva en Panamá</h2>
+          <p class="section-desc">
+            La evolución normativa que convirtió el acceso a la educación inclusiva en una obligación de Estado y una garantía de derechos humanos en el territorio panameño.
+          </p>
+        </div>
+      </div>
+
+      <div class="legal-timeline">
+        <!-- Hito 1: Ley 42 de 1999 -->
+        <div class="timeline-card">
+          <div class="timeline-dot" style="--dot-color: var(--indigo-500);"></div>
+          <div class="timeline-header">
+            <h3 class="timeline-title">Ley 42 de 27 de agosto de 1999</h3>
+            <span class="timeline-year-tag">Año 1999</span>
+          </div>
+          <p class="timeline-body">
+            <strong>Equiparación de Oportunidades para las Personas con Discapacidad:</strong> Declara de interés social la plena integración ciudadana en igualdad de calidad de vida. En sus <em>Artículos 19 y 21</em>, garantiza el derecho ineludible a la educación dentro del sistema escolar regular, instruyendo al MEDUCA a proveer servicios de apoyo y adecuaciones curriculares con suficiente flexibilidad.
+          </p>
+          <div class="timeline-actions">
+            <button class="btn-modal-open" onclick="openModal('modal-ley42')">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+              <span>Ver Análisis Jurídico & Artículos</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Hito 2: Decreto Ejecutivo N.º 1 de 2000 -->
+        <div class="timeline-card">
+          <div class="timeline-dot" style="--dot-color: var(--teal-500);"></div>
+          <div class="timeline-header">
+            <h3 class="timeline-title">Decreto Ejecutivo N.º 1 de 4 de febrero de 2000</h3>
+            <span class="timeline-year-tag">Año 2000</span>
+          </div>
+          <p class="timeline-body">
+            <strong>Normativa para la Educación Inclusiva de la Población con NEE:</strong> Reglamenta formalmente el tránsito entre la educación especial y el aula regular. Define los procedimientos técnicos para implementar adecuaciones de acceso y curriculares significativas y no significativas, asegurando la permanencia y promoción del estudiante.
+          </p>
+          <div class="timeline-actions">
+            <button class="btn-modal-open" onclick="openModal('modal-dec1')">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+              <span>Ver Procedimientos & Alcance</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Hito 3: Resuelto N.º 924 de 2006 -->
+        <div class="timeline-card">
+          <div class="timeline-dot" style="--dot-color: var(--amber-500);"></div>
+          <div class="timeline-header">
+            <h3 class="timeline-title">Resuelto N.º 924 de 24 de junio de 2006 (MEDUCA)</h3>
+            <span class="timeline-year-tag">Año 2006</span>
+          </div>
+          <p class="timeline-body">
+            <strong>Adopción Oficial del Programa Educativo Individual (PEI):</strong> Establece el uso obligatorio del PEI en todos los centros educativos oficiales y particulares del país. Lo consagra como la herramienta técnico-pedagógica indispensable para planificar, instrumentalizar, monitorear y evaluar los logros de los alumnos con necesidades educativas especiales.
+          </p>
+          <div class="timeline-actions">
+            <button class="btn-modal-open" onclick="openModal('modal-res924')">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+              <span>Ver Componentes del PEI</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECCIÓN 3: BUENAS PRÁCTICAS DE EDUCACIÓN INCLUSIVA EN EL NIVEL MEDIO
+         ====================================================================== -->
+    <section class="section-block" id="buenas-practicas">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <span class="section-eyebrow" style="--accent-color: var(--emerald-400);">Prácticas en Secundaria & Bachillerato</span>
+          <h2 class="section-title">Buenas Prácticas Inclusivas en el Nivel Medio</h2>
+          <p class="section-desc">
+            Estrategias didácticas reales y contrastadas para garantizar el éxito escolar de adolescentes y jóvenes en colegios de educación media.
+          </p>
+        </div>
+      </div>
+
+      <div class="practices-grid">
+        <!-- Buena Práctica 1: PEI con adecuaciones -->
+        <article class="practice-card">
+          <span class="practice-tag">Práctica Documentada 01</span>
+          <h3 class="practice-title">1. Implementación del PEI con adecuaciones curriculares personalizadas</h3>
+          <p style="color: var(--text-muted); font-size: 0.94rem;">
+            En la educación media, la complejidad disciplinar se incrementa. El PEI permite diseñar ajustes concretos en metodologías, evaluación y criterios de acreditación sin desvirtuar las competencias del perfil de egreso:
+          </p>
+
+          <ul class="practice-list">
+            <li class="practice-item">
+              <span class="item-check-icon">✓</span>
+              <span><strong>Priorización curricular:</strong> Selección de objetivos nucleares y competencias esenciales en materias científicas y humanísticas.</span>
+            </li>
+            <li class="practice-item">
+              <span class="item-check-icon">✓</span>
+              <span><strong>Diversificación evaluativa:</strong> Aplicación de defensas orales, rúbricas de desempeño o evaluaciones mediadas por tecnología asistiva.</span>
+            </li>
+            <li class="practice-item">
+              <span class="item-check-icon">✓</span>
+              <span><strong>Flexibilización temporal:</strong> Otorgamiento de tiempo adicional dosificado en pruebas escritas y proyectos de trimestre.</span>
+            </li>
+            <li class="practice-item">
+              <span class="item-check-icon">✓</span>
+              <span><strong>Materiales accesibles:</strong> Suministro de contenidos en formatos multimodales (audiolibros, esquemas gráficos interactivos, textos adaptados).</span>
+            </li>
+          </ul>
+        </article>
+
+        <!-- Buena Práctica 2: Diversificación y Aprendizaje Cooperativo -->
+        <article class="practice-card">
+          <span class="practice-tag">Práctica Documentada 02</span>
+          <h3 class="practice-title">2. Diversificación didáctica (DUA) y aprendizaje cooperativo en el aula</h3>
+          <p style="color: var(--text-muted); font-size: 0.94rem;">
+            Supera la clase magistral unidireccional para activar metodologías participativas que aprovechan la sinergia del grupo como motor de aprendizaje social:
+          </p>
+
+          <ul class="practice-list">
+            <li class="practice-item">
+              <span class="item-check-icon">✓</span>
+              <span><strong>Multimodalidad de representación:</strong> Exposición de contenidos mediante canales visuales, auditivos y kinestésicos experienciales.</span>
+            </li>
+            <li class="practice-item">
+              <span class="item-check-icon">✓</span>
+              <span><strong>Equipos heterogéneos:</strong> Asignación de roles complementarios (investigador, relator, coordinador visual) donde cada alumno aporta según sus talentos.</span>
+            </li>
+            <li class="practice-item">
+              <span class="item-check-icon">✓</span>
+              <span><strong>Rúbricas de progreso individual:</strong> Ponderación del avance propio respecto a su línea de base, estimulando la motivación intrínseca.</span>
+            </li>
+            <li class="practice-item">
+              <span class="item-check-icon">✓</span>
+              <span><strong>Corresponsabilidad con las familias:</strong> Canales continuos de comunicación para dar seguimiento a los acuerdos pedagógicos del PEI.</span>
+            </li>
+          </ul>
+        </article>
+      </div>
+
+      <!-- SIMULADOR INTERACTIVO DE CASO REAL: 10.° GRADO -->
+      <div class="simulator-box">
+        <div class="simulator-header">
+          <div>
+            <span class="simulator-badge">Laboratorio Pedagógico Interactivo</span>
+            <h3 style="font-size: 1.3rem; margin-top: 0.4rem; color: #ffffff;">Simulador de Caso de Aula: Estudiante de 10.° Grado</h3>
+          </div>
+        </div>
+        
+        <div class="simulator-case-desc">
+          <strong>Contexto:</strong> En un colegio de Educación Media (10.° grado), un estudiante presenta dificultades significativas en fluidez de lectoescritura y velocidad de procesamiento en la asignatura de Historia y Literatura. <em>Haz clic en cada ajuste para ver la intervención docente recomendada por el MEDUCA:</em>
+        </div>
+
+        <div class="strategy-buttons">
+          <button class="btn-strategy active" onclick="showSimulatorCase('obj')">1. Priorizar Objetivos</button>
+          <button class="btn-strategy" onclick="showSimulatorCase('eval')">2. Evaluación Oral / Tecnológica</button>
+          <button class="btn-strategy" onclick="showSimulatorCase('tiempo')">3. Tiempo Adicional</button>
+          <button class="btn-strategy" onclick="showSimulatorCase('multimodal')">4. Formatos Multimodales</button>
+        </div>
+
+        <div class="strategy-display" id="simulator-output">
+          <!-- Se actualiza con app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECCIÓN 4: CENTRO DE RECURSOS AUDIOVISUALES (VIDEOS EDUCATIVOS)
+         ====================================================================== -->
+    <section class="section-block" id="multimedia">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <span class="section-eyebrow" style="--accent-color: var(--cyan-500);">Recursos Audiovisuales</span>
+          <h2 class="section-title">Videos Educativos sobre Inclusión y DUA</h2>
+          <p class="section-desc">
+            Contenido multimedia seleccionado para profundizar en la aplicación práctica de la diversidad en las aulas de secundaria.
+          </p>
+        </div>
+      </div>
+
+      <div class="videos-grid">
+        <!-- Video 1: Educación Inclusiva OEI/UNESCO -->
+        <div class="video-card">
+          <div class="video-frame-wrap">
+            <iframe 
+              src="https://www.youtube.com/embed/7V2C_7lQ_3s" 
+              title="Educación Inclusiva: Concepto y Fundamentos" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="video-info">
+            <span class="video-source">Organización de Estados Iberoamericanos (OEI)</span>
+            <h4 class="video-card-title">Fundamentos y Transformación hacia la Educación Inclusiva</h4>
+            <p class="video-card-desc">
+              Explora cómo las instituciones educativas transitan del modelo integrador a un auténtico paradigma inclusivo que acoge la diversidad como potencial de aprendizaje.
+            </p>
+          </div>
+        </div>
+
+        <!-- Video 2: DUA en Secundaria -->
+        <div class="video-card">
+          <div class="video-frame-wrap">
+            <iframe 
+              src="https://www.youtube.com/embed/s3jH8iF-47A" 
+              title="Diseño Universal para el Aprendizaje (DUA) en Secundaria" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="video-info">
+            <span class="video-source">Agencia Educativa & Prácticas DUA</span>
+            <h4 class="video-card-title">Diseño Universal para el Aprendizaje en la Práctica</h4>
+            <p class="video-card-desc">
+              Pautas concretas para diversificar la motivación, la representación y la acción y expresión en el aula de educación media.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECCIÓN 5: GAMIFICACIÓN (DESAFÍO INCLUSIVO)
+         ====================================================================== -->
+    <section class="section-block" id="desafio">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <span class="section-eyebrow" style="--accent-color: var(--amber-400);">Gamificación & Autoevaluación</span>
+          <h2 class="section-title">Desafío Inclusivo: Pon a Prueba tus Competencias</h2>
+          <p class="section-desc">
+            Participa en este reto formativo breve para verificar tu comprensión del marco legal panameño y los principios de diversidad.
+          </p>
+        </div>
+      </div>
+
+      <div class="quiz-container" id="quiz-wrapper">
+        <div class="quiz-progress-bar-wrap">
+          <div class="quiz-progress-fill" id="quiz-progress"></div>
+        </div>
+
+        <div class="quiz-header">
+          <span class="quiz-step-indicator" id="quiz-step">Pregunta 1 de 4</span>
+          <span class="quiz-score-badge" id="quiz-score-tracker">Puntos: 0</span>
+        </div>
+
+        <!-- Vista de Pregunta -->
+        <div id="quiz-question-view">
+          <h3 class="quiz-question-text" id="quiz-question-title">Cargando pregunta...</h3>
+          <div class="quiz-options-list" id="quiz-options">
+            <!-- Botones de opciones generados por app.js -->
+          </div>
+
+          <div class="quiz-feedback-box" id="quiz-feedback">
+            <!-- Explicación pedagógica inmediata -->
+          </div>
+
+          <div class="quiz-actions">
+            <button id="btn-quiz-next" class="btn-next-question" onclick="nextQuizQuestion()">
+              Siguiente Pregunta →
+            </button>
+          </div>
+        </div>
+
+        <!-- Vista de Resultados Finales -->
+        <div class="quiz-result-view" id="quiz-results">
+          <div class="quiz-trophy">🎓</div>
+          <h3 style="font-size: 1.8rem; margin-bottom: 0.5rem;" id="quiz-result-title">¡Excelente Desempeño!</h3>
+          <p style="color: var(--text-muted); max-width: 550px; margin: 0 auto 1.5rem;" id="quiz-result-msg">
+            Has demostrado un conocimiento sólido sobre la legislación panameña de inclusión y los principios psicopedagógicos para el nivel medio.
+          </p>
+          <div style="font-size: 1.25rem; font-weight: 800; color: var(--emerald-400); margin-bottom: 2rem;" id="quiz-final-score">
+            Puntuación: 4 / 4
+          </div>
+          <button class="btn-modal-open" onclick="restartQuiz()">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg>
+            <span>Volver a Intentar</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECCIÓN 6: FUENTES CONSULTADAS Y BIBLIOGRAFÍA
+         ====================================================================== -->
+    <section class="section-block" id="fuentes">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <span class="section-eyebrow" style="--accent-color: var(--indigo-400);">Rigor Académico</span>
+          <h2 class="section-title">Fuentes Consultadas & Referencias Oficiales</h2>
+          <p class="section-desc">
+            Documentación legal, estudios del Ministerio de Educación de Panamá (MEDUCA) y organismos internacionales que sustentan este recurso.
+          </p>
+        </div>
+        <button class="btn-tool" onclick="copyCitations()" title="Copiar todas las referencias al portapapeles">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          <span id="copy-btn-text">Copiar Referencias</span>
+        </button>
+      </div>
+
+      <div class="sources-card">
+        <ul class="sources-list" id="sources-container">
+          <li class="source-item">
+            <div class="source-details">
+              <span class="source-badge">Normativa</span>
+              <p class="source-citation">
+                <strong>República de Panamá. (1999).</strong> Ley N.º 42 de 27 de agosto de 1999, <em>«Por la cual se establece la Equiparación de Oportunidades para las Personas con Discapacidad»</em>. Gaceta Oficial N.º 23,876.
+              </p>
+            </div>
+            <a href="https://siteal.iiep.unesco.org/bdnp/388/ley-421999-establece-equiparacion-oportunidades-personas-discapacidad" target="_blank" rel="noopener noreferrer" class="btn-link-source">
+              <span>Consultar en SITEAL/UNESCO</span> ↗
+            </a>
+          </li>
+
+          <li class="source-item">
+            <div class="source-details">
+              <span class="source-badge">Decreto</span>
+              <p class="source-citation">
+                <strong>Ministerio de Educación de Panamá. (2000).</strong> Decreto Ejecutivo N.º 1 de 4 de febrero de 2000, <em>«Por el cual se establece la Normativa para la Educación Inclusiva de la Población con Necesidades Educativas Especiales (NEE)»</em>.
+              </p>
+            </div>
+            <a href="https://docs.panama.justia.com/federales/decretos-ejecutivos/1-de-2000-feb-10-2000.pdf" target="_blank" rel="noopener noreferrer" class="btn-link-source">
+              <span>Consultar en Justia Panamá</span> ↗
+            </a>
+          </li>
+
+          <li class="source-item">
+            <div class="source-details">
+              <span class="source-badge">Resuelto MEDUCA</span>
+              <p class="source-citation">
+                <strong>Ministerio de Educación de Panamá. (2006).</strong> Resuelto N.º 924 de 24 de junio de 2006, <em>«Por el cual se adopta en todos los centros educativos públicos del país el Programa Educativo Individual (PEI)»</em>. MEDUCA.
+              </p>
+            </div>
+            <a href="https://www.meduca.gob.pa/sites/default/files/editor/48/resuelto_No924.pdf" target="_blank" rel="noopener noreferrer" class="btn-link-source">
+              <span>Portal Oficial MEDUCA</span> ↗
+            </a>
+          </li>
+
+          <li class="source-item">
+            <div class="source-details">
+              <span class="source-badge">Informe Oficial</span>
+              <p class="source-citation">
+                <strong>Ministerio de Educación de Panamá (MEDUCA).</strong> <em>Estudio de la Situación de la Educación Inclusiva en Panamá: Diagnóstico y Lineamientos Curriculares</em>. Ciudad de Panamá.
+              </p>
+            </div>
+            <a href="https://www.meduca.gob.pa/wp-content/uploads/2025/05/InclusiveEducation_Panama.pdf" target="_blank" rel="noopener noreferrer" class="btn-link-source">
+              <span>Informe MEDUCA</span> ↗
+            </a>
+          </li>
+
+          <li class="source-item">
+            <div class="source-details">
+              <span class="source-badge">Guía Internacional</span>
+              <p class="source-citation">
+                <strong>Agencia Europea para el Desarrollo de la Educación del Alumnado con NEE.</strong> <em>Educación inclusiva y prácticas en el aula en la educación secundaria: Guía de buenas prácticas</em>. Bruselas.
+              </p>
+            </div>
+            <a href="https://www.european-agency.org/sites/default/files/inclusive-education-and-classroom-practice-in-secondary-education_iecp_secondary_es.pdf" target="_blank" rel="noopener noreferrer" class="btn-link-source">
+              <span>Documento European Agency</span> ↗
+            </a>
+          </li>
+
+          <li class="source-item">
+            <div class="source-details">
+              <span class="source-badge">Guía Pedagógica</span>
+              <p class="source-citation">
+                <strong>Save the Children.</strong> <em>Guía de buenas prácticas en educación inclusiva: Aulas accesibles y participativas para todos los estudiantes</em>.
+              </p>
+            </div>
+            <a href="https://www.savethechildren.es/sites/default/files/imce/docs/guia_de_buenas_practicas_en_educacion_inclusiva_vok.pdf" target="_blank" rel="noopener noreferrer" class="btn-link-source">
+              <span>Guía Save the Children</span> ↗
+            </a>
+          </li>
+
+          <li class="source-item">
+            <div class="source-details">
+              <span class="source-badge">Academia</span>
+              <p class="source-citation">
+                <strong>Universidad Internacional de Valencia (VIU).</strong> <em>Educación inclusiva: claves y prácticas recomendables en entornos de educación secundaria</em>.
+              </p>
+            </div>
+            <a href="https://www.universidadviu.com/es/actualidad/nuestros-expertos/caracteristicas-y-buenas-practicas-para-la-educacion-inclusiva" target="_blank" rel="noopener noreferrer" class="btn-link-source">
+              <span>Artículo VIU</span> ↗
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       VENTANAS EMERGENTES (MODALES ACCESIBLES)
+       ======================================================================== -->
+  
+  <!-- Modal 1: Ley 42 de 1999 -->
+  <div id="modal-ley42" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="title-m-ley42">
+    <div class="modal-container">
+      <button class="btn-modal-close" onclick="closeModal('modal-ley42')" aria-label="Cerrar modal">&times;</button>
+      <span class="modal-eyebrow">Norma Matriz de Panamá</span>
+      <h3 id="title-m-ley42" class="modal-title">Ley 42 de 27 de agosto de 1999</h3>
+      
+      <div class="modal-content-body">
+        <p>
+          Esta ley constituye el pilar fundacional de los derechos humanos para la equiparación de oportunidades en Panamá, inspirada en las Normas Uniformes de la ONU.
+        </p>
+
+        <div class="modal-highlight-box">
+          <strong>Artículo 19:</strong> «La persona con discapacidad se incluirá en el sistema educativo regular, el cual debe proveerle los servicios de apoyo y las ayudas técnicas necesarias para acceder al currículo regular».
+        </div>
+
+        <div class="modal-highlight-box">
+          <strong>Artículo 21:</strong> «El Ministerio de Educación generará las condiciones que faciliten adecuaciones y/o adaptaciones curriculares con la suficiente flexibilidad para responder a las necesidades educativas en la diversidad».
+        </div>
+
+        <h4 style="color: var(--text-main); margin-top: 1rem; margin-bottom: 0.5rem;">Impacto en el Aula de Media:</h4>
+        <p>
+          Garantiza que ningún estudiante pueda ser rechazado o expulsado de un bachillerato por motivos de discapacidad o barreras de aprendizaje, obligando a las instituciones a adaptar sus entornos físicos, metodológicos y actitudinales.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2: Decreto Ejecutivo N.º 1 de 2000 -->
+  <div id="modal-dec1" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="title-m-dec1">
+    <div class="modal-container">
+      <button class="btn-modal-close" onclick="closeModal('modal-dec1')" aria-label="Cerrar modal">&times;</button>
+      <span class="modal-eyebrow">Reglamentación Operativa</span>
+      <h3 id="title-m-dec1" class="modal-title">Decreto Ejecutivo N.º 1 de 4 de febrero de 2000</h3>
+      
+      <div class="modal-content-body">
+        <p>
+          Reglamenta los aspectos técnico-administrativos de la educación inclusiva en el territorio panameño y delimita las responsabilidades de los directores, docentes de grado y especialistas de apoyo.
+        </p>
+
+        <div class="modal-highlight-box">
+          <strong>Adecuaciones Curriculares:</strong> Establece la tipología oficial de adecuaciones (de acceso, no significativas y significativas), fijando el protocolo de evaluación diagnóstica integral que debe preceder a cualquier ajuste curricular.
+        </div>
+
+        <h4 style="color: var(--text-main); margin-top: 1rem; margin-bottom: 0.5rem;">Elementos Clave en Secundaria:</h4>
+        <ul style="padding-left: 1.2rem;">
+          <li>Obligatoriedad de mantener un expediente psicopedagógico actualizado por estudiante con NEE.</li>
+          <li>Articulación y trabajo conjunto entre el docente regular y el maestro de apoyo o psicopedagogo del IPHE / MEDUCA.</li>
+          <li>Garantía de emisión de diplomas de culminación de estudios con validez oficial sin estigmatizaciones.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3: Resuelto N.º 924 de 2006 (MEDUCA) -->
+  <div id="modal-res924" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="title-m-res924">
+    <div class="modal-container">
+      <button class="btn-modal-close" onclick="closeModal('modal-res924')" aria-label="Cerrar modal">&times;</button>
+      <span class="modal-eyebrow">Herramienta Pedagógica Oficial</span>
+      <h3 id="title-m-res924" class="modal-title">Resuelto N.º 924 de 24 de junio de 2006 (MEDUCA)</h3>
+      
+      <div class="modal-content-body">
+        <p>
+          Institucionaliza formalmente el <strong>Programa Educativo Individual (PEI)</strong> como el documento rector para todo estudiante que requiera ajustes a su trayectoria educativa.
+        </p>
+
+        <div class="modal-highlight-box">
+          <strong>Adopción Nacional:</strong> «Se adopta en todos los centros educativos públicos del país el Programa Educativo Individual (PEI) para favorecer la accesibilidad, instrumentalización y monitoreo de los logros de los estudiantes con NEE».
+        </div>
+
+        <h4 style="color: var(--text-main); margin-top: 1rem; margin-bottom: 0.5rem;">Estructura que debe contener el PEI:</h4>
+        <ul style="padding-left: 1.2rem;">
+          <li><strong>Datos y diagnóstico psicopedagógico:</strong> Puntos fuertes, estilo de aprendizaje y barreras identificadas.</li>
+          <li><strong>Propuesta de adecuación:</strong> Modificaciones en objetivos, contenidos, metodología y criterios evaluativos.</li>
+          <li><strong>Recursos de apoyo:</strong> Material tecnológico, acompañamiento pedagógico y adaptaciones de aula.</li>
+          <li><strong>Compromisos y firmas:</strong> Docente titular, especialista, directivo escolar y padre o acudiente.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="main-wrapper" style="padding: 0;">
+      <p><strong>Recurso Educativo Digital: Atención a la Diversidad & Educación Inclusiva</strong></p>
+      <p class="footer-credits">Desarrollado para la formación pedagógica y el fortalecimiento docente en el nivel medio en Panamá.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
