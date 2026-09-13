@@ -245,33 +245,6 @@ const APP_DATA = {
     }
   ],
 
-  // 5. VIDEOTECA ACADÉMICA CONFIABLE
-  videos: [
-    {
-      id: "arianna-ted",
-      title: "Arianna Huffington: La Tercera Métrica y el Éxito por el Bienestar",
-      source: "Conferencia Oficial TED",
-      tag: "Tercera Métrica & Bienestar",
-      youtubeId: "nncY-MA1Iu8",
-      description: "Conferencia oficial donde Arianna Huffington expone el poder del descanso, la lucidez mental y la superación del agotamiento (burnout) para alcanzar una vida plena y equilibrada."
-    },
-    {
-      id: "rita-pierson",
-      title: "Rita Pierson: Todo Niño Necesita un Campeón (El Vínculo Pedagógico)",
-      source: "Conferencia Oficial TED Talks Education",
-      tag: "Psicopedagogía & Vínculo",
-      youtubeId: "SFnMTHhKdkw",
-      description: "Una de las charlas docentes más inspiradoras del mundo sobre pedagogía humanista, empatía, generosidad y el impacto transformador del vínculo educador-estudiante."
-    },
-    {
-      id: "ken-robinson",
-      title: "Sir Ken Robinson: La Creatividad y el Aprendizaje en la Educación",
-      source: "Conferencia Oficial TED",
-      tag: "Aprendizaje & Diversidad",
-      youtubeId: "iG9CE55wbtY",
-      description: "Disertación magistral sobre cómo transformar los entornos educativos para potenciar las inteligencias múltiples y comprender las diversas formas de aprender."
-    }
-  ],
 
   // 6. FUENTES CONSULTADAS CITADAS DE MANERA SENCILLA
   references: [

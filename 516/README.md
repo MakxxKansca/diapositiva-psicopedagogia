@@ -47,17 +47,15 @@ Simplemente abre el enlace publicado en GitHub Pages en cualquier dispositivo (c
 
 ---
 
-## 🕹️ Requisitos de Interactividad (4 de 4 Implementados)
+## 🕹️ Requisitos de Interactividad Cumplidos
 
 1. **Botones de interacción que despliegan información adicional:**
    - En cada uno de los 4 pilares de la Tercera Métrica, botones de acordeón `"Ver Aplicación Docente"` que despliegan la praxis pedagógica, preguntas de autorreflexión y consejos prácticos.
 2. **Ventanas emergentes (Pop-up windows):**
    - En la línea de tiempo, botones interactivos `"Ver Hito y Cita (Pop-up)"` que abren ventanas modales con citas célebres, contexto histórico y relevancia psicopedagógica.
-3. **Videos incrustados de fuentes confiables:**
-   - Videoteca académica responsiva con conferencias oficiales de TED sobre la Tercera Métrica (Arianna Huffington: *"¿Cómo tener éxito? Duerme más"*) e inspiración pedagógica (Rita Pierson: *"Todo niño necesita un campeón"*).
-4. **Elementos de gamificación (Desafío interactivo):**
+3. **Elementos de gamificación (Desafío interactivo):**
    - Cuestionario formativo de 5 preguntas dinámicas con retroalimentación explicativa inmediata, marcador de puntaje en vivo y generación de un **Diploma de Reconocimiento personalizable e imprimible en PDF** con el nombre del usuario ("Denis").
-5. **Widget Interactivo de Autocuidado Práctico:**
+4. **Widget Interactivo de Autocuidado Práctico:**
    - **Temporizador 50/10:** Alternador entre 50 minutos de trabajo concentrado y 10 minutos de pausa activa sin pantallas.
    - **Guía de Respiración Consciente 4-7-8:** Círculo visual interactivo guiado por fases (inhalar, retener, exhalar).
    - **Checklist Diario de Hábitos:** Registro de compromisos de autocuidado diario con retroalimentación motivacional.

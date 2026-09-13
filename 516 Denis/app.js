@@ -315,7 +315,6 @@ document.addEventListener('DOMContentLoaded', () => {
       this.renderTimeline();
       this.renderThirdMetric();
       this.renderSelfCare();
-      this.renderVideos();
       this.renderSources();
     },
 
@@ -439,30 +438,6 @@ document.addEventListener('DOMContentLoaded', () => {
       `).join('');
     },
 
-    // 4. Videoteca académica confiable
-    renderVideos() {
-      const container = document.getElementById('videos-container');
-      if (!container || !window.APP_DATA) return;
-
-      container.innerHTML = APP_DATA.videos.map((vid) => `
-        <div class="video-card">
-          <div class="video-frame-wrap">
-            <iframe 
-              src="https://www.youtube-nocookie.com/embed/${vid.youtubeId}" 
-              title="${vid.title}" 
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-              allowfullscreen>
-            </iframe>
-          </div>
-          <div class="video-card-body">
-            <span class="video-tag">${vid.tag}</span>
-            <h4 class="video-card-title">${vid.title}</h4>
-            <p class="video-card-desc">${vid.description}</p>
-          </div>
-        </div>
-      `).join('');
-    },
 
     // 5. Fuentes consultadas citadas de manera sencilla
     renderSources() {
