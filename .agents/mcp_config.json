@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "chrome-devtools": {
+      "command": "cmd.exe",
+      "args": [
+        "/c",
+        "set PATH=C:\\Program Files\\nodejs;%PATH% && npx -y chrome-devtools-mcp@latest"
+      ]
+    }
+  }
+}
