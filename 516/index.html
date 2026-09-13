@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evolución de la Psicopedagogía, Tercera Métrica y Autocuidado Docente | Recurso Interactivo</title>
+  <meta name="description" content="Recurso digital interactivo que presenta la evolución histórica de la psicopedagogía, los cuatro pilares de la Tercera Métrica de Arianna Huffington y estrategias de autocuidado docente.">
+  
+  <!-- Tipografías de Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Barra de progreso de lectura superior -->
+  <div class="reading-progress-bar" id="reading-progress" aria-hidden="true"></div>
+
+  <!-- ========================================================================
+       1. BARRA SUPERIOR DE NAVEGACIÓN Y HERRAMIENTAS ACCESIBLES
+       ======================================================================== -->
+  <header class="top-nav" role="banner">
+    <div class="nav-container">
+      <div class="brand">
+        <div class="brand-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+            <path d="M12 6v6"></path>
+            <path d="M9 9h6"></path>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <h1>Psicopedagogía XXI</h1>
+          <p>Recurso Digital Interactivo • Denis</p>
+        </div>
+      </div>
+
+      <!-- Enlaces de navegación -->
+      <nav role="navigation" aria-label="Navegación principal">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#hero" class="nav-link active">Inicio</a></li>
+          <li><a href="#linea-tiempo" class="nav-link">Línea de Tiempo</a></li>
+          <li><a href="#tercera-metrica" class="nav-link">Tercera Métrica</a></li>
+          <li><a href="#autocuidado" class="nav-link">Autocuidado</a></li>
+          <li><a href="#gamificacion" class="nav-link">Gamificación</a></li>
+          <li><a href="#videoteca" class="nav-link">Videoteca</a></li>
+          <li><a href="#fuentes" class="nav-link">Fuentes</a></li>
+        </ul>
+      </nav>
+
+      <!-- Herramientas de Accesibilidad y Control -->
+      <div class="accessibility-tools">
+        <!-- Narrador por voz (Web Speech API) -->
+        <button id="btn-narrator" class="tool-btn btn-narrate" title="Escuchar narración del recurso por voz" aria-label="Activar narrador por voz">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+          </svg>
+        </button>
+
+        <!-- Efectos de sonido sintetizados -->
+        <button id="btn-audio-fx" class="tool-btn" title="Activar/Silenciar efectos de sonido" aria-label="Alternar efectos sonoros">
+          <svg id="audio-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+          </svg>
+        </button>
+
+        <!-- Ajuste de tipografía -->
+        <button id="btn-font-dec" class="tool-btn" title="Disminuir tamaño de letra" aria-label="Disminuir tamaño de fuente">A-</button>
+        <button id="btn-font-inc" class="tool-btn" title="Aumentar tamaño de letra" aria-label="Aumentar tamaño de fuente">A+</button>
+
+        <!-- Cambio de Tema (Oscuro / Claro) -->
+        <button id="btn-theme-toggle" class="tool-btn" title="Cambiar tema de color (Claro/Oscuro)" aria-label="Cambiar modo de contraste">
+          <svg id="theme-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <!-- Botón menú hamburguesa móvil -->
+        <button id="btn-mobile-menu" class="mobile-menu-toggle" aria-label="Abrir menú de navegación">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- ========================================================================
+         2. SECCIÓN HERO (PORTADA PRINCIPAL)
+         ======================================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="badge-tag">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+        Recurso Digital Interactivo • Siglo XXI
+      </div>
+      <h1 class="hero-title">
+        Evolución Histórica de la <span class="gradient-text">Psicopedagogía</span>,<br>
+        Tercera Métrica y Autocuidado Docente
+      </h1>
+      <p class="hero-subtitle">
+        Un recorrido dinámico e interactivo por la fundamentación epistemológica de la psicopedagogía, la redefinición del éxito humano propuesta por Arianna Huffington y estrategias digitales de bienestar aplicables a la vocación educadora.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#linea-tiempo" class="btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+          Iniciar Recorrido Interactivo
+        </a>
+        <a href="#gamificacion" class="btn-secondary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg>
+          Desafío Gamificado & Diploma
+        </a>
+      </div>
+
+      <!-- Tarjetas de Requisitos Clave en Hero -->
+      <div class="hero-pills-grid">
+        <div class="pill-card">
+          <div class="pill-icon blue">📜</div>
+          <div class="pill-body">
+            <h4>Línea de Tiempo</h4>
+            <p>5 hitos históricos esenciales desde la Antigua Grecia hasta la consolidación contemporánea.</p>
+          </div>
+        </div>
+        <div class="pill-card">
+          <div class="pill-icon purple">💎</div>
+          <div class="pill-body">
+            <h4>Tercera Métrica</h4>
+            <p>Los 4 pilares de Arianna Huffington: Bienestar, Sabiduría, Asombro y Generosidad.</p>
+          </div>
+        </div>
+        <div class="pill-card">
+          <div class="pill-icon teal">🧘</div>
+          <div class="pill-body">
+            <h4>Autocuidado Docente</h4>
+            <p>Pausas activas, reflexión, valoración de logros y redes de apoyo colaborativas.</p>
+          </div>
+        </div>
+        <div class="pill-card">
+          <div class="pill-icon amber">🎮</div>
+          <div class="pill-body">
+            <h4>Interactividad Total</h4>
+            <p>Pop-ups explicativos, videos educativos, temporizador 50/10 y quiz con certificado.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         3. SECCIÓN: LÍNEA DE TIEMPO INTERACTIVA CON POP-UPS
+         ======================================================================== -->
+    <section class="content-section" id="linea-tiempo">
+      <div class="section-header">
+        <div class="section-category">Fundamentación Epistemológica</div>
+        <h2 class="section-title">Evolución Histórica de la Psicopedagogía</h2>
+        <p class="section-desc">
+          Explora los momentos decisivos que transformaron las reflexiones filosóficas sobre el aprendizaje en una disciplina científica interdisciplinaria dedicada al acompañamiento educativo integral.
+        </p>
+      </div>
+
+      <div class="timeline-container">
+        <div class="timeline-track" aria-hidden="true"></div>
+        <div class="timeline-items" id="timeline-cards-container">
+          <!-- Inyectado dinámicamente desde data.js para máxima reactividad -->
+        </div>
+      </div>
+
+      <!-- Conclusión Epistemológica del Documento Base -->
+      <div class="epistemic-summary-card">
+        <div class="epistemic-icon" aria-hidden="true">💡</div>
+        <div class="epistemic-text">
+          <h4>Conclusión Epistemológica Fundamental</h4>
+          <p>
+            «La evolución histórica muestra que la <strong>Psicopedagogía</strong> surgió de la necesidad humana y social de comprender y atender las dificultades del aprendizaje desde la unión indivisible de la <strong>psicología</strong> y la <strong>pedagogía</strong>.»
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         4. SECCIÓN: LOS CUATRO PILARES DE LA TERCERA MÉTRICA
+         ======================================================================== -->
+    <section class="content-section" id="tercera-metrica">
+      <div class="section-header">
+        <div class="section-category">Filosofía del Éxito en el Siglo XXI</div>
+        <h2 class="section-title">Los Cuatro Pilares de la Tercera Métrica</h2>
+        <p class="section-desc">
+          Propuesta por Arianna Huffington para redefinir el éxito más allá de los dos parámetros tradicionales (dinero y poder), integrando dimensiones que sustentan una vida plena y equilibrada.
+        </p>
+      </div>
+
+      <!-- Tarjeta Introductoria de la Autora -->
+      <div class="third-metric-intro">
+        <div class="author-badge">
+          <div class="author-avatar" aria-hidden="true">AH</div>
+          <span class="author-name">Arianna Huffington</span>
+          <span class="author-role">Fundadora de The Huffington Post & Thrive Global</span>
+        </div>
+        <div class="third-metric-quote">
+          «Para vivir una vida verdaderamente exitosa y realizada, necesitamos una Tercera Métrica: una que incluya el bienestar, la capacidad de maravillarnos (asombro), la sabiduría acumulada y la generosidad hacia los demás.»
+        </div>
+      </div>
+
+      <!-- Grid de los 4 Pilares Interactivos -->
+      <div class="pillars-grid" id="pillars-container">
+        <!-- Inyectado dinámicamente desde data.js con botones interactivos -->
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         5. SECCIÓN: ESTRATEGIAS DE AUTOCUIDADO DOCENTE Y WIDGET PRÁCTICO
+         ======================================================================== -->
+    <section class="content-section" id="autocuidado">
+      <div class="section-header">
+        <div class="section-category">Salud y Calidad de Vida Educativa</div>
+        <h2 class="section-title">Estrategias de Autocuidado para el Docente</h2>
+        <p class="section-desc">
+          Estrategias concretas para prevenir el agotamiento profesional (*burnout*), recuperar la energía pedagógica y sostener la vocación formativa con equilibrio mental y corporal.
+        </p>
+      </div>
+
+      <div class="selfcare-grid">
+        <!-- Lista de 4 Estrategias de Información .md -->
+        <div class="strategies-list" id="strategies-container">
+          <!-- Inyectado dinámicamente desde data.js -->
+        </div>
+
+        <!-- Widget Interactivo de Autocuidado Práctico -->
+        <div class="selfcare-toolkit-widget">
+          <div class="widget-tabs" role="tablist">
+            <button class="widget-tab-btn active" data-tab="tab-timer" role="tab" aria-selected="true">
+              ⏱️ Pausa Activa 50/10
+            </button>
+            <button class="widget-tab-btn" data-tab="tab-breath" role="tab" aria-selected="false">
+              🌬️ Respiración 4-7-8
+            </button>
+            <button class="widget-tab-btn" data-tab="tab-checklist" role="tab" aria-selected="false">
+              ✅ Hábitos Diarios
+            </button>
+          </div>
+
+          <!-- Panel 1: Temporizador 50/10 -->
+          <div class="widget-tab-panel active" id="tab-timer" role="tabpanel">
+            <div class="timer-container">
+              <div class="timer-circle-wrap">
+                <svg class="timer-svg" viewBox="0 0 160 160">
+                  <circle class="timer-track-circle" cx="80" cy="80" r="75"></circle>
+                  <circle class="timer-fill-circle" id="timer-circle-fill" cx="80" cy="80" r="75"></circle>
+                </svg>
+                <div class="timer-display">
+                  <div class="timer-time" id="timer-display-text">50:00</div>
+                  <div class="timer-state-label" id="timer-mode-label">Modo Trabajo Enfocado</div>
+                </div>
+              </div>
+              <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.25rem;">
+                Regla 50/10: 50 minutos de labor seguidos de 10 minutos de pausa sin pantallas.
+              </p>
+              <div class="timer-controls">
+                <button class="timer-btn start" id="btn-start-timer">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  <span id="timer-start-label">Iniciar Pausa</span>
+                </button>
+                <button class="timer-btn reset" id="btn-reset-timer">Reiniciar</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 2: Guía de Respiración Consciente 4-7-8 -->
+          <div class="widget-tab-panel" id="tab-breath" role="tabpanel">
+            <div class="breathing-container">
+              <div class="breath-instruction" id="breath-status-text">Presiona Iniciar para calmar el sistema nervioso</div>
+              <div class="breath-circle" id="breath-visual-circle">
+                <span style="font-size: 2.2rem;">🧘</span>
+              </div>
+              <div class="breath-subtext" id="breath-timer-counter">Inhala (4s) • Retén (7s) • Exhala (8s)</div>
+              <div class="timer-controls">
+                <button class="timer-btn start" id="btn-start-breath">Iniciar Guía Guiada</button>
+                <button class="timer-btn reset" id="btn-stop-breath">Detener</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 3: Checklist Diario de Hábitos de Autocuidado -->
+          <div class="widget-tab-panel" id="tab-checklist" role="tabpanel">
+            <div style="padding: 0.5rem 0;">
+              <h4 style="font-size: 0.95rem; font-weight: 700; margin-bottom: 0.75rem;">Compromisos de Bienestar Hoy:</h4>
+              <div style="display: flex; flex-direction: column; gap: 0.65rem;" id="daily-checklist-items">
+                <label style="display: flex; align-items: center; gap: 0.75rem; font-size: 0.875rem; cursor: pointer;">
+                  <input type="checkbox" style="width: 18px; height: 18px; accent-color: var(--accent-indigo);">
+                  <span>Tomar al menos 2 pausas activas durante la jornada</span>
+                </label>
+                <label style="display: flex; align-items: center; gap: 0.75rem; font-size: 0.875rem; cursor: pointer;">
+                  <input type="checkbox" style="width: 18px; height: 18px; accent-color: var(--accent-indigo);">
+                  <span>5 minutos de reflexión consciente al terminar clases</span>
+                </label>
+                <label style="display: flex; align-items: center; gap: 0.75rem; font-size: 0.875rem; cursor: pointer;">
+                  <input type="checkbox" style="width: 18px; height: 18px; accent-color: var(--accent-indigo);">
+                  <span>Identificar y celebrar 1 logro de un estudiante</span>
+                </label>
+                <label style="display: flex; align-items: center; gap: 0.75rem; font-size: 0.875rem; cursor: pointer;">
+                  <input type="checkbox" style="width: 18px; height: 18px; accent-color: var(--accent-indigo);">
+                  <span>Conversar o colaborar solidariamente con un colega</span>
+                </label>
+                <label style="display: flex; align-items: center; gap: 0.75rem; font-size: 0.875rem; cursor: pointer;">
+                  <input type="checkbox" style="width: 18px; height: 18px; accent-color: var(--accent-indigo);">
+                  <span>Desconexión total de correos y pantallas antes de dormir</span>
+                </label>
+              </div>
+              <div style="margin-top: 1.25rem; font-size: 0.8rem; color: #34d399; font-weight: 600;" id="checklist-feedback">
+                ¡Cada pequeño hábito protege tu salud física y mental!
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         6. SECCIÓN: GAMIFICACIÓN (DESAFÍO PSICOPEDAGÓGICO & CERTIFICADO)
+         ======================================================================== -->
+    <section class="content-section" id="gamificacion">
+      <div class="section-header">
+        <div class="section-category">Evaluación Interactiva Gamificada</div>
+        <h2 class="section-title">Desafío Psicopedagógico: Valida tu Saber</h2>
+        <p class="section-desc">
+          Responde a las 5 preguntas sobre la historia de la psicopedagogía, los pilares de la Tercera Métrica y las pautas de autocuidado docente. ¡Consigue una puntuación perfecta para recibir tu Certificado!
+        </p>
+      </div>
+
+      <div class="quiz-wrapper">
+        <!-- Vista del Cuestionario Activo -->
+        <div id="quiz-question-view">
+          <div class="quiz-top-bar">
+            <div class="quiz-progress-info">
+              <span class="quiz-step-label" id="quiz-step-text">Pregunta 1 de 5</span>
+              <div class="quiz-progress-track">
+                <div class="quiz-progress-bar" id="quiz-progress-bar"></div>
+              </div>
+            </div>
+            <div class="quiz-score-badge">
+              <span>⭐ Puntos:</span>
+              <span id="quiz-score-count">0</span> / 500
+            </div>
+          </div>
+
+          <div class="quiz-question-box">
+            <span style="font-size: 0.8rem; font-weight: 700; color: var(--accent-cyan); text-transform: uppercase;" id="quiz-q-category">Categoría</span>
+            <h3 id="quiz-q-title">Cargando pregunta...</h3>
+          </div>
+
+          <div class="quiz-options-list" id="quiz-options-box">
+            <!-- Botones de opciones inyectados desde app.js -->
+          </div>
+
+          <!-- Caja de Retroalimentación Inmediata Formativa -->
+          <div class="quiz-feedback-box" id="quiz-feedback-box">
+            <div class="quiz-feedback-icon" id="quiz-fb-icon">💡</div>
+            <div class="quiz-feedback-text">
+              <h4 id="quiz-fb-title">Explicación</h4>
+              <p id="quiz-fb-desc">Detalle pedagógico formativo...</p>
+            </div>
+          </div>
+
+          <div class="quiz-actions">
+            <button class="btn-next-question" id="btn-next-q">
+              <span>Siguiente Pregunta</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Vista de Resultados y Certificado / Diploma Final -->
+        <div class="quiz-result-view" id="quiz-result-view">
+          <div class="result-trophy">🏆</div>
+          <h3 class="result-title">¡Desafío Completado con Éxito!</h3>
+          <p class="result-score-highlight" id="result-score-summary">Has obtenido 500 de 500 puntos</p>
+
+          <!-- Diploma Personalizable Imprimible -->
+          <div class="certificate-container" id="printable-certificate">
+            <div class="cert-seal">★</div>
+            <div class="cert-header">
+              <h3>Diploma de Reconocimiento</h3>
+              <p>Formación Integral en Psicopedagogía & Tercera Métrica</p>
+            </div>
+            <div class="cert-body-label">Otorgado con distinción a:</div>
+            <input type="text" class="cert-user-name-input" id="cert-student-name" value="Denis" title="Escribe tu nombre para personalizar el diploma" placeholder="Escribe tu nombre aquí">
+            <p class="cert-description">
+              Por haber demostrado un conocimiento profundo en la evolución epistemológica de la Psicopedagogía, la adopción de los principios de la Tercera Métrica y el compromiso con el autocuidado docente.
+            </p>
+            <div class="cert-footer-row">
+              <div>
+                <strong>Fecha de Emisión:</strong> <span id="cert-date-text">13 de septiembre de 2026</span>
+              </div>
+              <div>
+                <strong>Acreditación:</strong> Recurso Educativo Digital XXI
+              </div>
+            </div>
+          </div>
+
+          <div class="cert-actions">
+            <button class="btn-primary" id="btn-print-cert">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+              Imprimir o Guardar Diploma en PDF
+            </button>
+            <button class="btn-secondary" id="btn-retry-quiz">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"></polyline><polyline points="23 20 23 14 17 14"></polyline><path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"></path></svg>
+              Reintentar Desafío
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         7. SECCIÓN: VIDEOTECA ACADÉMICA CONFIABLE
+         ======================================================================== -->
+    <section class="content-section" id="videoteca">
+      <div class="section-header">
+        <div class="section-category">Fuentes Audiovisuales Confiables</div>
+        <h2 class="section-title">Videoteca Académica Seleccionada</h2>
+        <p class="section-desc">
+          Conferencias oficiales e inspiradoras sobre la Tercera Métrica y la pedagogía humanista para complementar el estudio con reflexiones en video.
+        </p>
+      </div>
+
+      <div class="videos-grid" id="videos-container">
+        <!-- Inyectado dinámicamente desde data.js -->
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         8. SECCIÓN: FUENTES CONSULTADAS
+         ======================================================================== -->
+    <section class="content-section" id="fuentes">
+      <div class="section-header">
+        <div class="section-category">Rigor Académico y Bibliografía</div>
+        <h2 class="section-title">Fuentes Consultadas</h2>
+        <p class="section-desc">
+          Referencias bibliográficas y fuentes de consulta académica organizadas de manera clara y sencilla para consulta y verificación de contenidos.
+        </p>
+      </div>
+
+      <div class="sources-card">
+        <ul class="sources-list" id="sources-container">
+          <!-- Inyectado dinámicamente desde data.js -->
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       9. VENTANA EMERGENTE (POP-UP MODAL REUTILIZABLE)
+       ======================================================================== -->
+  <div class="modal-overlay" id="app-modal" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+    <div class="modal-window">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <span id="modal-badge-label">Hito Histórico</span>
+          <h3 id="modal-headline">Título del Hito</h3>
+        </div>
+        <button class="btn-close-modal" id="btn-close-modal" aria-label="Cerrar ventana emergente">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-quote-box" id="modal-quote-text">
+          «Cita textual célebre...»
+        </div>
+        <div class="modal-section-title">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+          Contexto y Fundamentos
+        </div>
+        <p class="modal-text" id="modal-context-desc">Descripción contextual...</p>
+        
+        <div class="modal-section-title">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          Relevancia para la Psicopedagogía
+        </div>
+        <p class="modal-text" id="modal-impact-desc">Aporte e impacto formativo...</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-secondary" id="btn-modal-ok">Entendido</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       10. PIE DE PÁGINA (FOOTER)
+       ======================================================================== -->
+  <footer class="app-footer" role="contentinfo">
+    <div class="footer-content">
+      <div class="footer-brand">Psicopedagogía, Tercera Métrica & Autocuidado Docente</div>
+      <p class="footer-desc">
+        Recurso digital interactivo diseñado para Denis • Actividad Académica Universitaria • Integración de Historia, Humanismo y Bienestar.
+      </p>
+      <div class="footer-copyright">
+        © 2026 Denis • Desarrollado con HTML5 semántico, CSS3 Vanilla y JavaScript moderno • Cumplimiento total de requerimientos e interactividad.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Archivos de Scripts -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
